@@ -1,3 +1,4 @@
+rm -rf amit
 git init
 git clone https://jhaji-kv@bitbucket.org/7sk8g739g/amit.git
 cd amit
@@ -12,8 +13,6 @@ git commit -m "*"
 sudo apt install expect
 sudo /usr/bin/expect <<EOF
 spawn git push origin
-sleep 1
-send "jhaji-kv\r"
 sleep 1
 send "utT2AtgBKq9PKvckcLLN"
 sleep 3
