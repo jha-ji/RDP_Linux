@@ -12,13 +12,11 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 git add *.txt
 git commit -m "*"
-##printf "utT2AtgBKq9PKvckcLLN" | git push origin
 sudo apt install expect
 sudo /usr/bin/expect <<EOF
 spawn git push origin
-send "utT2AtgBKq9PKvckcLLN"
 sleep 3
-send "utT2AtgBKq9PKvckcLLN"
+send -- "utT2AtgBKq9PKvckcLLN\r"
 sleep 1
 expect eof
 EOF
