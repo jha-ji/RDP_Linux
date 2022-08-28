@@ -1,0 +1,7 @@
+image: gitpod/workspace-full
+ports:
+- port: 0-65535
+  onOpen: ignore
+workspaceLocation: "/"
+tasks:
+- command: printf "root\nroot" | sudo passwd root && printf "root" | su - root -c " curl https://raw.githubusercontent.com/amitstudydude/RDP_Linux/main/scripts/gitpod.io | sudo bash " 

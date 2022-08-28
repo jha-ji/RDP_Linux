@@ -1,3 +1,20 @@
+**aria2c**
+aria2c --dir=/drives/Teamdrive/ --allow-overwrite=true  https://nya.iss.one/download/1225621.torrent
+
+
+**Download to fake**
+curl https://raw.githubusercontent.com/amitstudydude/RDP_Linux/main/scripts/download%20to%20fake | bash 
+
+
+**Lint**
+curl https://raw.githubusercontent.com/amitstudydude/guacamole/main/Lint | bash
+
+**SSH**
+service ssh restart && sed -i '3 i PasswordAuthentication yes' /etc/ssh/sshd_config && sed -i '3 i PermitUserEnvironment yes' /etc/ssh/sshd_config && sed -i '3 i PermitRootLogin yes' /etc/ssh/sshd_config  && service ssh restart
+
+
+**Installing docker**
+curl https://raw.githubusercontent.com/amitstudydude/RDP_Linux/main/scripts/Install-docker | sudo bash
 
 **Rclone**
 curl https://raw.githubusercontent.com/amitstudydude/RDP_Linux/main/scripts/rclonemount.sh | sudo bash
