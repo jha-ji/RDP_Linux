@@ -14,6 +14,10 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}  #get_personnel_access_token https://github.com/settings/tokens
       - name: Merge upstream
         run: |
+          export repo=${{ github.event.repository.name }}
+          git clone https://github.com/amitstudydude/$repo.git
+          rsync -a "$repo"/* . 
+          rm -rf "$repo"
           date > date && sleep 1
           git config --global user.name 'amitstudydude'
           git config --global user.email 'amitstudydude@users.noreply.github.com'
