@@ -1,0 +1,14 @@
+yes Y | wget -O xrdp.zip https://c-nergy.be/downloads/xRDP/xrdp-installer-1.4.2.zip
+7z x xrdp.zip
+mv *sh /home
+rm xrdp.zip 
+printf "root" | su - runner -c "cd /home && bash ./*sh -s "
+killall pulseaudio
+pulseaudio & 
+
+##curl https://raw.githubusercontent.com/amitstudydude/RDP_Linux/main/scripts/pulseaudio | bash
+
+
+
+
+##
